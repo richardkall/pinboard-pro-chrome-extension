@@ -1,16 +1,16 @@
 {
-  "name": "__MSG_appName__",
-  "version": "0.0.3",
+  "name": "Pinboard Pro",
+  "version": "0.1.0",
   "manifest_version": 2,
-  "description": "__MSG_appDescription__",
+  "description": "Google Chrome extension for Pinboard (https://pinboard.in).",
+  "author": "Richard Käll",
+  "homepage_url": "http://richardkall.se/google-chrome-extension-for-pinboard-in-pinboard-pro/",
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
   },
-  "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/chromereload.js",
       "scripts/background.js"
     ]
   },
@@ -19,8 +19,11 @@
       "19": "images/icon-19.png",
       "38": "images/icon-38.png"
     },
-    "default_title": "Pinboard Pro",
+    "default_title": "Pinboard",
     "default_popup": "popup.html"
   },
-  "options_page": "options.html"
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
 }

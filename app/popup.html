@@ -1,22 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+
     <!-- build:css styles/main.css -->
     <link href="styles/main.css" rel="stylesheet">
     <!-- endbuild -->
   </head>
   <body>
-    <h1>'Allo, 'Allo!</h1>
+    <ul class="popup-list">
+      <li class="popup-list__item">
+        <a class="popup-list__link" id="save" href="#"><i class="icon-pinboard"></i> Save bookmark</a>
+      </li>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
+      <li class="popup-list__item">
+        <a class="popup-list__link" id="readLater" href="#"><i class="icon-read"></i> Read later</a>
+      </li>
+
+      <li class="popup-list__item">
+        <a class="popup-list__link" id="all" href="#"><i class="icon-bookmarks"></i> All bookmarks</a>
+      </li>
+
+      <li class="popup-list__item">
+        <a class="popup-list__link" id="unread" href="#"><i class="icon-unread"></i> Unread bookmarks</a>
+      </li>
+
+      <li class="popup-list__item">
+        <a class="popup-list__link" id="random" href="#"><i class="icon-random"></i> Random unread</a>
+      </li>
+    </ul>
 
     <!-- build:js scripts/popup.js -->
     <script src="scripts/popup.js"></script>

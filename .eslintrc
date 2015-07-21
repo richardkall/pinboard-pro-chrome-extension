@@ -1,0 +1,49 @@
+{
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true
+  },
+  "globals": {
+    "chrome": true
+  },
+  "rules": {
+    "block-scoped-var": 2,
+    "brace-style": [2, "1tbs", {"allowSingleLine": true}],
+    "curly": [2, "multi"],
+    "dot-location": [2, "property"],
+    "func-style": [2, "expression"],
+    "indent": [2, 2],
+    "newline-after-var": 2,
+    "no-else-return": 2,
+    "no-eq-null": 2,
+    "no-inline-comments": 2,
+    "no-lonely-if": 2,
+    "no-multiple-empty-lines": [2, {"max": 1}],
+    "no-nested-ternary": 2,
+    "no-self-compare": 2,
+    "no-throw-literal": 2,
+    "no-unneeded-ternary": 2,
+    "no-void": 2,
+    "no-warning-comments": 2,
+    "object-curly-spacing": 2,
+    "one-var": [2, "never"],
+    "operator-assignment": 2,
+    "operator-linebreak": 2,
+    "padded-blocks": [2, "never"],
+    "quote-props": [2, "as-needed"],
+    "quotes": [2, "single", "avoid-escape"],
+    "radix": 2,
+    "sort-vars": 2,
+    "space-after-keywords": 2,
+    "space-before-blocks": 2,
+    "space-before-function-paren": 2,
+    "space-in-brackets": 2,
+    "space-in-parens": 2,
+    "space-unary-ops": 2,
+    "spaced-line-comment": 2,
+    "strict": [2, "function"],
+    "vars-on-top": 2,
+    "wrap-regex": 2
+  }
+}

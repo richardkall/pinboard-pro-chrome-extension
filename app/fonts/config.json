@@ -1,0 +1,40 @@
+{
+  "name": "pinboard",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "8538a2249db7f07ae75411886732fb87",
+      "css": "bookmarks",
+      "code": 59393,
+      "src": "entypo"
+    },
+    {
+      "uid": "da0fd38d651815e3a12f6c030ff1fe5b",
+      "css": "random",
+      "code": 59399,
+      "src": "entypo"
+    },
+    {
+      "uid": "51727ca007aa35ceabcaffc28934faee",
+      "css": "read",
+      "code": 59394,
+      "src": "entypo"
+    },
+    {
+      "uid": "c91522256a4c3972e9a2765b995b7252",
+      "css": "pinboard",
+      "code": 59398,
+      "src": "zocial"
+    },
+    {
+      "uid": "a3662e0fce8c28f9b91a3889094cd1e9",
+      "css": "unread",
+      "code": 59392,
+      "src": "elusive"
+    }
+  ]
+}
