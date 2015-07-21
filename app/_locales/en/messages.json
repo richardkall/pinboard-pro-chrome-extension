@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Pinboard Pro",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Pinboard Chrome Extension",
+    "description": "The description of the application"
+  }
+}
