@@ -5,7 +5,8 @@
     "node": true
   },
   "globals": {
-    "chrome": true
+    "chrome": true,
+    "Pinboard": true
   },
   "rules": {
     "block-scoped-var": 2,

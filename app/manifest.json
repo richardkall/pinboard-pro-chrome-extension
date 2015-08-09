@@ -5,12 +5,46 @@
   "description": "Google Chrome extension for Pinboard (https://pinboard.in).",
   "author": "Richard Käll",
   "homepage_url": "http://richardkall.se/google-chrome-extension-for-pinboard-in-pinboard-pro/",
+  "commands": {
+    "save": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "MacCtrl+Shift+S"
+      },
+      "description": "Save bookmark"
+    },
+    "read_later": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "MacCtrl+Shift+L"
+      },
+      "description": "Read later"
+    },
+    "all": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "MacCtrl+Shift+A"
+      },
+      "description": "All bookmarks"
+    },
+    "unread": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "MacCtrl+Shift+U"
+      },
+      "description": "Unread bookmarks"
+    },
+    "random": {
+      "description": "Random unread"
+    }
+  },
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
   },
   "background": {
     "scripts": [
+      "scripts/pinboard.js",
       "scripts/background.js"
     ]
   },
