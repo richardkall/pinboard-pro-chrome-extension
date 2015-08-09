@@ -19,13 +19,13 @@ $ npm install
 Local debugging:
 
 ```bash
-$ grunt debug
+$ npm start
 ```
 
 Lint JavaScript (using ESLint):
 
 ```bash
-$ grunt lint
+$ npm run lint
 ```
 
 ## Deployment
@@ -33,7 +33,7 @@ $ grunt lint
 Build extension:
 
 ```bash
-$ grunt build
+$ npm run build
 ```
 
 ## License
