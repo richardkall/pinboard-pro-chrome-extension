@@ -56,8 +56,14 @@
     "default_title": "Pinboard",
     "default_popup": "popup.html"
   },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "options_page": "options.html",
   "permissions": [
     "activeTab",
+    "storage",
     "tabs"
   ]
 }

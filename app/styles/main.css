@@ -46,6 +46,11 @@ body {
   margin-bottom: 3px;
 }
 
+.popup-list__item:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
 .popup-list__link {
   display: block;
   padding: 5px 8px;
