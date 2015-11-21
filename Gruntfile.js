@@ -81,9 +81,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-    eslint: {
-      target: ['<%= config.app %>/scripts/{,*/}*.js']
-    },
     htmlmin: {
       dist: {
         options: {
@@ -166,10 +163,6 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
-
-  grunt.registerTask('lint', [
-    'eslint'
-  ]);
 
   grunt.registerTask('build', [
     'clean:dist',
