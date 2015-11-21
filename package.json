@@ -1,6 +1,6 @@
 {
   "name": "pinboard-pro",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Google Chrome extension for Pinboard.in (https://pinboard.in).",
   "author": "Richard Käll <richard.kall@me.com>",
