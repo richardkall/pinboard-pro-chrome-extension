@@ -1,4 +1,4 @@
-# Pinboard Pro
+# Pinboard Pro [![Dependency Status](https://gemnasium.com/richardkall/pinboard-pro-chrome-extension.svg)](https://gemnasium.com/richardkall/pinboard-pro-chrome-extension)
 
 > Google Chrome extension for Pinboard.in (https://pinboard.in).
 
