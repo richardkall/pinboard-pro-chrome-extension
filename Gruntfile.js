@@ -1,6 +1,4 @@
 module.exports = function (grunt) {
-  'use strict';
-
   var config = {
     app: 'app',
     dist: 'dist'

@@ -1,6 +1,4 @@
-var restoreOptions = function () {
-  'use strict';
-
+function restoreOptions () {
   chrome.storage.sync.get({
     puSave: true,
     puReadLater: true,
@@ -14,11 +12,9 @@ var restoreOptions = function () {
     document.getElementById('pu-unread').checked = items.puUnread;
     document.getElementById('pu-random').checked = items.puRandom;
   });
-};
+}
 
-var updateStatus = function () {
-  'use strict';
-
+function updateStatus () {
   var status = document.getElementById('status');
 
   status.textContent = 'Options saved.';
@@ -26,11 +22,9 @@ var updateStatus = function () {
   setTimeout(function () {
     status.textContent = '';
   }, 750);
-};
+}
 
-var saveOptions = function () {
-  'use strict';
-
+function saveOptions () {
   var puSave = document.getElementById('pu-save').checked;
   var puReadLater = document.getElementById('pu-readlater').checked;
   var puAll = document.getElementById('pu-all').checked;
@@ -44,7 +38,7 @@ var saveOptions = function () {
     puUnread: puUnread,
     puRandom: puRandom
   }, updateStatus());
-};
+}
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
 document.getElementById('save').addEventListener('click', saveOptions);
