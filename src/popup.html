@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        font-family: system, -apple-system, '.SFNSDisplay-Regular', 'Helvetica Neue', 'Lucida Grande';
+        font-size: 13px;
+        margin: 0;
+      }
+
+      .popup-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 160px;
+      }
+
+      .popup-list__item:nth-child(2),
+      .popup-list__item:nth-child(3) {
+        border-bottom: 1px solid #efefef;
+        margin-bottom: 3px;
+        padding-bottom: 3px;
+      }
+
+      .popup-list__item:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .popup-list__link {
+        color: #333;
+        display: block;
+        padding: 5px 8px 5px 0;
+        text-decoration: none;
+      }
+
+      .popup-list__link:hover {
+        background: #e0f7fa;
+      }
+
+      .popup-list__link:focus {
+        outline: none
+      }
+
+      .popup-list__icon {
+        width: 13px;
+        height: 13px;
+        margin: 0 5px -2px;
+        opacity: .85;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="popup-list">
+      <li class="popup-list__item js-save">
+        <a class="popup-list__link" href="#">
+          <img class="popup-list__icon" src="images/save.svg"> Save bookmark
+        </a>
+      </li>
+      <li class="popup-list__item js-readLater">
+        <a class="popup-list__link" href="#">
+          <img class="popup-list__icon" src="images/readlater.svg"> Read later
+        </a>
+      </li>
+      <li class="popup-list__item js-all">
+        <a class="popup-list__link" href="#">
+          <img class="popup-list__icon" src="images/all.svg"> All bookmarks
+        </a>
+      </li>
+      <li class="popup-list__item js-unread">
+        <a class="popup-list__link" href="#">
+          <img class="popup-list__icon" src="images/unread.svg"> Unread bookmarks
+        </a>
+      </li>
+      <li class="popup-list__item js-random">
+        <a class="popup-list__link" href="#">
+          <img class="popup-list__icon" src="images/random.svg"> Random unread
+        </a>
+      </li>
+    </ul>
+    <!-- build:js js/popup.js -->
+    <script src="js/pinboard.js"></script>
+    <script src="js/popup.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

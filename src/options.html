@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pinboard Pro – Options</title>
+    <style>
+      .popup-menu {
+        margin-bottom: 10px;
+      }
+
+      .popup-menu__label {
+        display: block;
+        margin: 10px 0;
+      }
+
+      pre {
+        background: #eee;
+        color: #666;
+        display: inline-block;
+        font-size: 100%;
+        margin-top: 0;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Popup Menu</h2>
+    <div class="popup-menu">
+      <label class="popup-menu__label">
+        <input type="checkbox" class="js-show-save" checked> Show "Save bookmark"
+      </label>
+      <label class="popup-menu__label">
+        <input type="checkbox" class="js-show-readLater" checked> Show "Read later"
+      </label>
+      <label class="popup-menu__label">
+        <input type="checkbox" class="js-show-all" checked> Show "All bookmarks"
+      </label>
+      <label class="popup-menu__label">
+        <input type="checkbox" class="js-show-unread" checked> Show "Unread bookmarks"
+      </label>
+      <label class="popup-menu__label">
+        <input type="checkbox" class="js-show-random" checked> Show "Random unread"
+      </label>
+    </div>
+    <div class="js-status"></div>
+    <button class="js-save">Save</button>
+    <!-- build:js js/options.js -->
+    <script src="js/options.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

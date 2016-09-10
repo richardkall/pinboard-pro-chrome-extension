@@ -1,13 +1,7 @@
 {
   "extends": "richardkall/legacy",
-  "env": {
-    "browser": true
-  },
   "globals": {
-    "chrome": true,
-    "Pinboard": true
-  },
-  "rules": {
-    "no-unused-vars": 0
+    "Pinboard": true,
+    "chrome": true
   }
 }

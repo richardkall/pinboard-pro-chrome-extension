@@ -1,4 +1,4 @@
-# Pinboard Pro [![Dependency Status](https://gemnasium.com/richardkall/pinboard-pro-chrome-extension.svg)](https://gemnasium.com/richardkall/pinboard-pro-chrome-extension)
+# Pinboard Pro
 
 > Google Chrome extension for Pinboard.in (https://pinboard.in).
 
@@ -8,7 +8,7 @@
 
 - Save new bookmarks
 - Quick-save for reading later
-- Selected text automatically copied to description field 
+- Selected text automatically copied to description field
 - Keyboard shortcuts (customizable)
 - Customizable menu
 - Access all your bookmarks or unread only
@@ -29,20 +29,6 @@ Install dependencies:
 ```bash
 $ npm install
 ```
-
-Local debugging:
-
-```bash
-$ npm start
-```
-
-Lint JavaScript (using ESLint):
-
-```bash
-$ npm run lint
-```
-
-## Deployment
 
 Build extension:
 
