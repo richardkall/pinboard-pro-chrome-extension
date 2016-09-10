@@ -1,4 +1,4 @@
-# Pinboard Pro
+# Pinboard Pro [![Build Status](https://travis-ci.org/richardkall/pinboard-pro-chrome-extension.svg?branch=master)](https://travis-ci.org/richardkall/pinboard-pro-chrome-extension)
 
 > Google Chrome extension for Pinboard.in (https://pinboard.in).
 
