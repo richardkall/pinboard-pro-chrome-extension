@@ -45,7 +45,7 @@ gulp.task('html', function () {
 gulp.task('package', function () {
   var manifest = require('./build/manifest.json');
 
-  return gulp.src('build/*')
+  return gulp.src('build/**')
     .pipe(plugins.zip('pinboard-pro-' + manifest.version + '.zip'))
     .pipe(gulp.dest('build'));
 });
