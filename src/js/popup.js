@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .addEventListener('click', Pinboard[item]);
   });
 
-  chrome.storage.sync.get({visibleItems: true}, function (options) {
+  chrome.storage.sync.get({ visibleItems: true }, function (options) {
     if (!options.visibleItems || typeof options.visibleItems !== 'object') return;
     items.forEach(function (item) {
       if (!options.visibleItems[item]) {

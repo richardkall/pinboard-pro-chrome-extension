@@ -7,7 +7,7 @@ var runSequence = require('run-sequence');
 var plugins = gulpLoadPlugins();
 
 gulp.task('clean', function () {
-  return gulp.src('build', {read: false})
+  return gulp.src('build', { read: false })
     .pipe(plugins.clean());
 });
 
@@ -27,7 +27,7 @@ gulp.task('manifest', function () {
 
 gulp.task('html', function () {
   return gulp.src('src/*.html')
-    .pipe(plugins.useref({searchPath: ['src']}))
+    .pipe(plugins.useref({ searchPath: ['src'] }))
     .pipe(plugins.if('*.js', plugins.uglify()))
     .pipe(plugins.if('*.html', plugins.htmlmin({
       collapseBooleanAttributes: true,

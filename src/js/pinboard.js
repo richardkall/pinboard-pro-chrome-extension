@@ -2,13 +2,13 @@ var BASE_URL = 'https://pinboard.in';
 
 var Pinboard = { // eslint-disable-line no-unused-vars
   all: function () {
-    chrome.tabs.create({url: BASE_URL});
+    chrome.tabs.create({ url: BASE_URL });
   },
   random: function () {
-    chrome.tabs.create({url: BASE_URL + '/random/?type=unread'});
+    chrome.tabs.create({ url: BASE_URL + '/random/?type=unread' });
   },
   readLater: function () {
-    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       var tab = tabs[0];
       var url = BASE_URL
         + '/add?later=yes&noui=yes&jump=close&url=' + encodeURIComponent(tab.url)
@@ -17,7 +17,7 @@ var Pinboard = { // eslint-disable-line no-unused-vars
     });
   },
   save: function () {
-    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       var tab = tabs[0];
       chrome.tabs.executeScript(tab.id, {
         code: 'window.getSelection().toString();'
@@ -30,6 +30,6 @@ var Pinboard = { // eslint-disable-line no-unused-vars
     });
   },
   unread: function () {
-    chrome.tabs.create({url: BASE_URL + '/toread/'});
+    chrome.tabs.create({ url: BASE_URL + '/toread/' });
   }
 };

@@ -1,7 +1,12 @@
 {
-  "extends": "richardkall/legacy",
+  "extends": "airbnb-base/legacy",
   "globals": {
     "Pinboard": true,
     "chrome": true
+  },
+  "rules": {
+    "func-names": "off",
+    "no-restricted-syntax": "off",
+    "no-prototype-builtins": "off"
   }
 }

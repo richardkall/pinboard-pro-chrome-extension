@@ -1,5 +1,5 @@
-function restoreOptions () {
-  chrome.storage.sync.get({visibleItems: true}, function (options) {
+function restoreOptions() {
+  chrome.storage.sync.get({ visibleItems: true }, function (options) {
     var key;
     for (key in options.visibleItems) {
       if (options.visibleItems.hasOwnProperty(key)) {
@@ -9,7 +9,7 @@ function restoreOptions () {
   });
 }
 
-function updateStatus () {
+function updateStatus() {
   var status = document.querySelector('.js-status');
   status.textContent = 'Saved!';
   setTimeout(function () {
@@ -17,7 +17,7 @@ function updateStatus () {
   }, 750);
 }
 
-function saveOptions () {
+function saveOptions() {
   var visibleItems = {};
   var items = ['all', 'random', 'readLater', 'save', 'unread'];
 
@@ -25,7 +25,7 @@ function saveOptions () {
     visibleItems[item] = document.querySelector('.js-show-' + item).checked;
   });
 
-  chrome.storage.sync.set({visibleItems: visibleItems}, updateStatus());
+  chrome.storage.sync.set({ visibleItems: visibleItems }, updateStatus());
 }
 
 document.addEventListener('DOMContentLoaded', restoreOptions);

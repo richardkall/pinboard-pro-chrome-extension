@@ -12,8 +12,9 @@
     "prerelease": "npm run build"
   },
   "devDependencies": {
-    "eslint": "3.5.0",
-    "eslint-config-richardkall": "5.0.1",
+    "eslint": "3.14.0",
+    "eslint-config-airbnb-base": "11.0.1",
+    "eslint-plugin-import": "2.2.0",
     "gulp": "3.9.1",
     "gulp-chrome-manifest": "0.0.13",
     "gulp-clean": "0.3.2",
