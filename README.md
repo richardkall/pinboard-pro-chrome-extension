@@ -27,13 +27,13 @@ Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/pinboa
 Install dependencies:
 
 ```bash
-$ npm install
+$ yarn
 ```
 
 Build extension:
 
 ```bash
-$ npm run build
+$ yarn build
 ```
 
 ## License
