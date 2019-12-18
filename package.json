@@ -5,16 +5,15 @@
   "description": "Google Chrome extension for Pinboard.in (https://pinboard.in).",
   "author": "Richard Käll <richard.kall@me.com>",
   "scripts": {
-    "build": "gulp",
-    "lint": "eslint . --ignore-path .gitignore",
-    "release": "gulp package",
+    "format": "web-scripts format",
+    "lint": "web-scripts lint",
     "prebuild": "npm run lint",
-    "prerelease": "npm run build"
+    "build": "gulp",
+    "prerelease": "npm run build",
+    "release": "gulp package"
   },
   "devDependencies": {
-    "eslint": "3.14.0",
-    "eslint-config-airbnb-base": "11.0.1",
-    "eslint-plugin-import": "2.2.0",
+    "@richardkall/web-scripts": "^0.7.3",
     "gulp": "3.9.1",
     "gulp-chrome-manifest": "0.0.13",
     "gulp-clean": "0.3.2",
@@ -24,6 +23,7 @@
     "gulp-uglify": "2.0.0",
     "gulp-useref": "3.1.2",
     "gulp-zip": "3.2.0",
+    "husky": "^3.1.0",
     "run-sequence": "1.2.2"
   }
 }
