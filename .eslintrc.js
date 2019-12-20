@@ -8,7 +8,7 @@ module.exports = {
   },
   globals: {
     ...config.globals,
-    Pinboard: true,
-    chrome: true,
+    chrome: false,
+    Pinboard: false,
   },
 };

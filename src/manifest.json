@@ -1,69 +1,75 @@
 {
   "name": "Pinboard Pro",
-  "version": "",
   "manifest_version": 2,
   "description": "Google Chrome extension for Pinboard (https://pinboard.in).",
   "author": "Richard Käll",
   "homepage_url": "http://richardkall.se/google-chrome-extension-for-pinboard-in-pinboard-pro/",
-  "commands": {
-    "save": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+S",
-        "mac": "MacCtrl+Shift+S"
-      },
-      "description": "Save bookmark"
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icon-white16.png",
+      "24": "icon-white24.png",
+      "32": "icon-white32.png",
+      "48": "icon-white48.png",
+      "128": "icon-white128.png"
     },
-    "read_later": {
+    "default_popup": "popup.html",
+    "default_title": "Pinboard Pro"
+  },
+  "commands": {
+    "readLater": {
+      "description": "Read later",
       "suggested_key": {
         "default": "Ctrl+Shift+L",
         "mac": "MacCtrl+Shift+L"
-      },
-      "description": "Read later"
+      }
     },
-    "all": {
+    "saveBookmark": {
+      "description": "Save bookmark",
       "suggested_key": {
-        "default": "Ctrl+Shift+A",
-        "mac": "MacCtrl+Shift+A"
-      },
-      "description": "All bookmarks"
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      }
     },
-    "unread": {
+    "saveTabSet": {
+      "description": "Save tab set"
+    },
+    "openAllUnread": {
+      "description": "All unread",
       "suggested_key": {
         "default": "Ctrl+Shift+U",
-        "mac": "MacCtrl+Shift+U"
-      },
-      "description": "Unread bookmarks"
+        "mac": "Command+Shift+U"
+      }
     },
-    "random": {
+    "openAllBookmarks": {
+      "description": "All bookmarks",
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A"
+      }
+    },
+    "openAllTabSets": {
+      "description": "All tab sets"
+    },
+    "openRandomUnread": {
       "description": "Random unread"
     }
   },
   "icons": {
-    "16": "images/icon-16.png",
-    "128": "images/icon-128.png"
-  },
-  "background": {
-    "scripts": [
-      "js/pinboard.js",
-      "js/background.js"
-    ]
-  },
-  "browser_action": {
-    "default_icon": {
-      "19": "images/icon-19.png",
-      "38": "images/icon-38.png"
-    },
-    "default_title": "Pinboard",
-    "default_popup": "popup.html"
-  },
-  "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
+    "16": "icon-black16.png",
+    "24": "icon-black24.png",
+    "32": "icon-black32.png",
+    "48": "icon-black48.png",
+    "128": "icon-black128.png"
   },
   "options_page": "options.html",
   "permissions": [
     "activeTab",
     "storage",
-    "tabs"
+    "tabs",
+    "https://pinboard.in/tabs/save/"
   ]
 }

@@ -1,51 +1,112 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Pinboard Pro – Options</title>
     <style>
-      .popup-menu {
-        margin-bottom: 10px;
+      html {
+        -webkit-font-smoothing: antialiased;
       }
-
-      .popup-menu__label {
-        display: block;
-        margin: 10px 0;
+      body {
+        padding: 1rem;
       }
-
-      pre {
-        background: #eee;
-        color: #666;
-        display: inline-block;
-        font-size: 100%;
-        margin-top: 0;
-        padding: 10px;
+      h1 {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      section {
+        margin-top: 2rem;
+      }
+      h2 {
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
+      .form-group {
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+      }
+      .form-group.inline {
+        align-items: center;
+        display: flex;
+      }
+      [type='checkbox'] {
+        margin-right: 0.5rem;
+        vertical-align: top;
+      }
+      button {
+        border: 0;
+        background-color: #e53e3e;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        height: 2em;
+        line-height: 1.2;
+        padding: 0 12px;
+      }
+      button:hover {
+        background-color: #9b2c2c;
+      }
+      #status {
+        color: #276749;
+        font-size: 14px;
+        margin-left: 16px;
       }
     </style>
   </head>
   <body>
-    <h2>Popup Menu</h2>
-    <div class="popup-menu">
-      <label class="popup-menu__label">
-        <input type="checkbox" class="js-show-save" checked> Show "Save bookmark"
-      </label>
-      <label class="popup-menu__label">
-        <input type="checkbox" class="js-show-readLater" checked> Show "Read later"
-      </label>
-      <label class="popup-menu__label">
-        <input type="checkbox" class="js-show-all" checked> Show "All bookmarks"
-      </label>
-      <label class="popup-menu__label">
-        <input type="checkbox" class="js-show-unread" checked> Show "Unread bookmarks"
-      </label>
-      <label class="popup-menu__label">
-        <input type="checkbox" class="js-show-random" checked> Show "Random unread"
-      </label>
-    </div>
-    <div class="js-status"></div>
-    <button class="js-save">Save</button>
-    <!-- build:js js/options.js -->
-    <script src="js/options.js"></script>
-    <!-- endbuild -->
+    <h1>Pinboard Pro Options</h1>
+    <section>
+      <h2>Popup menu</h2>
+      <div class="form-group">
+        <label
+          ><input id="readLater" type="checkbox" checked="checked" /> Show "Read
+          later"</label
+        >
+      </div>
+      <div class="form-group">
+        <label
+          ><input id="saveBookmark" type="checkbox" checked="checked" /> Show
+          "Save bookmark"</label
+        >
+      </div>
+      <div class="form-group">
+        <label
+          ><input id="saveTabSet" type="checkbox" checked="checked" /> Show
+          "Save tab set"</label
+        >
+      </div>
+      <div class="form-group">
+        <label
+          ><input id="openAllUnread" type="checkbox" checked="checked" /> Show
+          "All unread"</label
+        >
+      </div>
+      <div class="form-group">
+        <label
+          ><input id="openAllBookmarks" type="checkbox" checked="checked" />
+          Show "All bookmarks"</label
+        >
+      </div>
+      <div class="form-group">
+        <label
+          ><input id="openAllTabSets" type="checkbox" checked="checked" /> Show
+          "All tab sets"</label
+        >
+      </div>
+      <div class="form-group">
+        <label
+          ><input id="openRandomUnread" type="checkbox" checked="checked" />
+          Show "Random unread"</label
+        >
+      </div>
+    </section>
+    <section>
+      <div class="form-group inline">
+        <button id="save-button" type="button">Save</button>
+        <div id="status"></div>
+      </div>
+    </section>
   </body>
 </html>

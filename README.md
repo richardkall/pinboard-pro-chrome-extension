@@ -1,22 +1,24 @@
-# Pinboard Pro [![Build Status](https://travis-ci.org/richardkall/pinboard-pro-chrome-extension.svg?branch=master)](https://travis-ci.org/richardkall/pinboard-pro-chrome-extension)
+# [Pinboard Pro](https://chrome.google.com/webstore/detail/pinboard-pro/pmgaobiflaffpllgnepmhcnbdhfgnpna)
 
-> Google Chrome extension for Pinboard.in (https://pinboard.in).
+> Google Chrome extension for Pinboard.in.
 
-![Pinboard Pro](preview.jpg)
+![Pinboard Pro](preview.png)
 
 ## Features
 
-- Save new bookmarks
-- Quick-save for reading later
+- Save bookmarks
+- Save for reading later
+- Save tab sets
+- Quick access to all your bookmarks, unread items or saved tab sets
+- Open random unread item
+- Dark mode
 - Selected text automatically copied to description field
 - Keyboard shortcuts (customizable)
-- Customizable menu
-- Access all your bookmarks or unread only
-- Quick access to a random unread item
+- Fully customizable menu
 - Does not store login information
-- Mac OS X only: uses the new beautiful San Francisco font!
 
-The "Save bookmark"-dialog uses the official popup which means you have access to all your tags and tag suggestions.
+The _"Save bookmark"_-dialog uses the official popup which means you have access
+to all your tags and tag suggestions.
 
 ## Install
 
@@ -38,4 +40,4 @@ $ yarn build
 
 ## License
 
-MIT &copy; [Richard Käll](http://richardkall.se)
+MIT &copy; [Richard Käll](https://richardkall.se)

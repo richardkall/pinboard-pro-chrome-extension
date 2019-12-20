@@ -1,90 +1,164 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-font-smoothing: antialiased;
+      }
       body {
-        font-family:
-          system, -apple-system, '.SFNSDisplay-Regular', BlinkMacSystemFont,
-          'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
-          'Helvetica Neue', sans-serif;
-        font-size: 13px;
         margin: 0;
       }
-
-      .popup-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        width: 160px;
+      section {
+        border-bottom: 1px solid #393b3f;
+        width: 12.5rem;
       }
-
-      .popup-list__item:nth-child(2),
-      .popup-list__item:nth-child(3) {
-        border-bottom: 1px solid #efefef;
-        margin-bottom: 3px;
-        padding-bottom: 3px;
-      }
-
-      .popup-list__item:last-child {
+      section:last-child {
         border-bottom: 0;
-        margin-bottom: 0;
       }
-
-      .popup-list__link {
-        color: #333;
-        display: block;
-        padding: 5px 8px 5px 0;
+      a {
+        align-items: center;
+        background-color: #292a2d;
+        color: #e4e6e9;
+        cursor: default;
+        display: flex;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        height: 2.5rem;
+        padding: 0 0.875rem;
         text-decoration: none;
       }
-
-      .popup-list__link:hover {
-        background: #e0f7fa;
+      a:hover {
+        background-color: #38393c;
+        color: #dee0e3;
       }
-
-      .popup-list__link:focus {
-        outline: none
+      svg {
+        fill: #9ba0a5;
+        margin-right: 0.5rem;
       }
-
-      .popup-list__icon {
-        width: 13px;
-        height: 13px;
-        margin: 0 5px -2px;
-        opacity: .85;
+      .light a {
+        background-color: #fff;
+        color: #202124;
+      }
+      .light a:hover {
+        background-color: #eaebeb;
+      }
+      .light section {
+        border-color: #e9e9e9;
+      }
+      .light svg {
+        fill: #606367;
       }
     </style>
   </head>
-  <body>
-    <ul class="popup-list">
-      <li class="popup-list__item js-save">
-        <a class="popup-list__link" href="#">
-          <img class="popup-list__icon" src="images/save.svg"> Save bookmark
-        </a>
-      </li>
-      <li class="popup-list__item js-readLater">
-        <a class="popup-list__link" href="#">
-          <img class="popup-list__icon" src="images/readlater.svg"> Read later
-        </a>
-      </li>
-      <li class="popup-list__item js-all">
-        <a class="popup-list__link" href="#">
-          <img class="popup-list__icon" src="images/all.svg"> All bookmarks
-        </a>
-      </li>
-      <li class="popup-list__item js-unread">
-        <a class="popup-list__link" href="#">
-          <img class="popup-list__icon" src="images/unread.svg"> Unread bookmarks
-        </a>
-      </li>
-      <li class="popup-list__item js-random">
-        <a class="popup-list__link" href="#">
-          <img class="popup-list__icon" src="images/random.svg"> Random unread
-        </a>
-      </li>
-    </ul>
-    <!-- build:js js/popup.js -->
-    <script src="js/pinboard.js"></script>
-    <script src="js/popup.js"></script>
-    <!-- endbuild -->
+  <body id="body">
+    <section id="save-section">
+      <a href="#" id="readLater"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+        </svg>
+        Read later</a
+      >
+      <a href="#" id="saveBookmark">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+          />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </svg>
+        Save bookmark</a
+      >
+      <a href="#" id="saveTabSet"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path
+            d="M20 6h-8l-2-2H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm0 12H4V6h5.17l2 2H20v10zm-8-4h2v2h2v-2h2v-2h-2v-2h-2v2h-2z"
+          />
+        </svg>
+        Save tab set</a
+      >
+    </section>
+    <section id="list-section">
+      <a href="#" id="openAllUnread">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"
+          />
+          <path fill="none" d="M0 0h24v24H0V0z" />
+        </svg>
+        All unread
+      </a>
+      <a href="#" id="openAllBookmarks">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path
+            d="M15 7v12.97l-4.21-1.81-.79-.34-.79.34L5 19.97V7h10m4-6H8.99C7.89 1 7 1.9 7 3h10c1.1 0 2 .9 2 2v13l2 1V3c0-1.1-.9-2-2-2zm-4 4H5c-1.1 0-2 .9-2 2v16l7-3 7 3V7c0-1.1-.9-2-2-2z"
+          />
+        </svg>
+        All bookmarks
+      </a>
+      <a href="#" id="openAllTabSets"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"
+          />
+        </svg>
+        All tab sets</a
+      >
+    </section>
+    <section id="misc-section">
+      <a href="#" id="openRandomUnread">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path
+            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+          />
+        </svg>
+        Random unread
+      </a>
+    </section>
   </body>
 </html>
