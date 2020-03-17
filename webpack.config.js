@@ -1,4 +1,3 @@
-/* eslint-disable import/no-commonjs */
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
