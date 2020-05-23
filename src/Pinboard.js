@@ -14,45 +14,45 @@ export const Pinboard = {
     chrome.tabs.create({ url: `${baseUrl}/random/?type=unread` });
   },
   readLater() {
-    chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const tab = tabs[0];
       const url = `${baseUrl}/add?later=yes&noui=yes&jump=close&url=${encodeURIComponent(
-        tab.url,
+        tab.url
       )}&title=${encodeURIComponent(tab.title)}`;
       window.open(url, 'Pinboard', 'toolbar=no,scrollbars=no,width=1,height=1');
     });
   },
   saveBookmark() {
-    chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const tab = tabs[0];
       chrome.tabs.executeScript(
         tab.id,
         {
           code: 'window.getSelection().toString();',
         },
-        selection => {
+        (selection) => {
           const url = `${baseUrl}/add?showtags=yes&url=${encodeURIComponent(
-            tab.url,
+            tab.url
           )}&title=${encodeURIComponent(
-            tab.title,
+            tab.title
           )}&description=${encodeURIComponent(selection || '')}`;
           window.open(
             url,
             'Pinboard',
-            'toolbar=no,scrollbars=no,width=700,height=550',
+            'toolbar=no,scrollbars=no,width=700,height=550'
           );
-        },
+        }
       );
     });
   },
   saveTabSet() {
     chrome.windows.getAll(
       { populate: true, windowTypes: ['normal'] },
-      windows => {
+      (windows) => {
         const postData = new FormData();
         const request = new XMLHttpRequest();
         const windowList = [];
-        windows.forEach(window => {
+        windows.forEach((window) => {
           const tabList = [];
           window.tabs.forEach(({ title, url }) => {
             tabList.push({ title, url });
@@ -61,7 +61,7 @@ export const Pinboard = {
         });
         postData.append(
           'data',
-          JSON.stringify({ browser: 'chrome', windows: windowList }),
+          JSON.stringify({ browser: 'chrome', windows: windowList })
         );
         request.open('POST', `${baseUrl}/tabs/save/`, true);
         request.onreadystatechange = () => {
@@ -70,7 +70,7 @@ export const Pinboard = {
           }
         };
         request.send(postData);
-      },
+      }
     );
   },
 };

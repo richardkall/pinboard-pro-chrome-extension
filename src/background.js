@@ -23,7 +23,7 @@ chrome.tabs.onCreated.addListener(() => {
   checkSystemDarkMode();
 });
 
-chrome.commands.onCommand.addListener(command => {
+chrome.commands.onCommand.addListener((command) => {
   if (Pinboard[command]) {
     Pinboard[command]();
   }

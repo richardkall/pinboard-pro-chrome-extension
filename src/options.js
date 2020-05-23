@@ -9,7 +9,7 @@ function showNotification(text) {
 }
 
 function restoreOptions() {
-  chrome.storage.local.get(defaultValues, values => {
+  chrome.storage.local.get(defaultValues, (values) => {
     for (const key in values.visibleActions) {
       document.getElementById(key).checked = values.visibleActions[key];
     }
@@ -18,7 +18,7 @@ function restoreOptions() {
 
 function saveOptions() {
   const visibleActions = {};
-  actions.forEach(action => {
+  actions.forEach((action) => {
     visibleActions[action] = document.getElementById(action).checked;
   });
   chrome.storage.local.set({ visibleActions }, () => {
