@@ -16,17 +16,19 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new CopyPlugin([
-      { from: './src/images/**/*', flatten: true },
-      {
-        from: './src/manifest.json',
-        transform(content) {
-          const manifest = JSON.parse(content.toString());
-          manifest.version = pkg.version;
-          return Buffer.from(JSON.stringify(manifest));
+    new CopyPlugin({
+      patterns: [
+        { from: './src/images/**/*', flatten: true },
+        {
+          from: './src/manifest.json',
+          transform(content) {
+            const manifest = JSON.parse(content.toString());
+            manifest.version = pkg.version;
+            return Buffer.from(JSON.stringify(manifest));
+          },
         },
-      },
-    ]),
+      ],
+    }),
     new HtmlWebpackPlugin({
       template: './src/popup.html',
       filename: 'popup.html',
